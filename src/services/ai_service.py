@@ -1,0 +1,1 @@
+# Este é um exemplo de um serviço. Este arquivo pode conter a lógica para a sua inteligência artificial que envia dados para outra API.

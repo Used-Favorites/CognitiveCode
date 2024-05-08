@@ -2,7 +2,5 @@
 
 class Config:
     PORT: int = 5000
-    host: str = '127.0.0.1'
-    debug: bool = True
-    def __init__(self):
-        pass
+    HOST: str = '127.0.0.1'
+    DEBUG: bool = True

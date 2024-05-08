@@ -3,4 +3,4 @@
 from src import app
 from config import Config
 
-app.run(Config.host, Config.PORT, Config.debug)
+app.run(Config.HOST, Config.PORT, Config.DEBUG)

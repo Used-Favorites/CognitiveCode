@@ -1,19 +1,8 @@
-# Este arquivo inicializa o aplicativo Flask e reúne todas as partes do projeto.
-
-from flask import Flask, request
+from flask import Flask
 from src.middlewares import authData
 
-app = Flask('DemoApp')
+from .router.main import main
 
-# calling our middleware
-app.wsgi_app = authData.Middleware(app.wsgi_app)
+app = Flask('CognitiveFlask')
 
-@app.route('/', methods=['GET', 'POST'])
-def hello():
-    # using 
-    user = request.environ['user']
-    return "Hi %s" % user['name']
-
-
-if __name__ == "__main__":
-    app.run('127.0.0.1', 5000, debug=True)
+app.register_blueprint(main)
